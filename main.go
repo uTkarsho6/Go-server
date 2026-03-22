@@ -9,7 +9,7 @@ import (
 func helloHandler(w http.ResponseWriter,r *http.Request){    // w :- response r :- request
     if r.URL.Path != "/hello" {
 		http.Error(w , "404 not found" , http.StatusNotFound)
-		// syntax: func Error(w ResponseWriter, error string, code int) , here statusnot found is 404
+		// syntax: func Error(w ResponseWriter, error string, code int) , here status not found is 404
         return
 	}
 
@@ -61,7 +61,8 @@ func main() {
 	if err := http.ListenAndServe(":8080",nil); err != nil {
     log.Fatal(err)
 	}
-    
+    // WORKING:
+	
 	// Listen: Open a network TCP port (8080) and wait for incoming requests , Serve = Handle incoming requests and send responses.
     // nil means use default HTTP router (http.DefaultServeMux)” above handlers are register to this router;
 // 1: OS opens port 8080
