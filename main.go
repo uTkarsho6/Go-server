@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 )
-
+ // SERVER:
 func helloHandler(w http.ResponseWriter,r *http.Request){    // w :- response r :- request
     if r.URL.Path != "/hello" {
 		http.Error(w , "404 not found" , http.StatusNotFound)
